@@ -5,21 +5,21 @@
 class StavTunnel < Formula
   desc "Serve the models on this machine through Stav (Stav Tunnel)"
   homepage "https://stav.ai"
-  version "0.2.3"
+  version "0.3.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.2.3/stav-tunnel_0.2.3_darwin_amd64.tar.gz"
-      sha256 "e97138184648562c276f1289fe01d001f6be23d08e9f20888a10a4da44e5d4fe"
+      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.3.0/stav-tunnel_0.3.0_darwin_amd64.tar.gz"
+      sha256 "c870a74c2122fc0b2d6c1ca008bbee557fe4fc74ec6be2330fefbea3ff8cbf18"
 
       define_method(:install) do
         bin.install "stav-tunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.2.3/stav-tunnel_0.2.3_darwin_arm64.tar.gz"
-      sha256 "454be8145a842f090397be676bab423c17cad796c9b1ab4d8ee9d1981beaf75b"
+      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.3.0/stav-tunnel_0.3.0_darwin_arm64.tar.gz"
+      sha256 "7de51abff38acd2809d36f6931860d1b7685b589e7b424dfce213a663a3d7342"
 
       define_method(:install) do
         bin.install "stav-tunnel"
@@ -29,15 +29,15 @@ class StavTunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.2.3/stav-tunnel_0.2.3_linux_amd64.tar.gz"
-      sha256 "11d3c88114efe4957be14aad648641f80b6a2dd60b2dd03737eedc8389f8cb13"
+      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.3.0/stav-tunnel_0.3.0_linux_amd64.tar.gz"
+      sha256 "3005367f23ed73ec2aedf119c953ad4fe8456205c210ed2b15ddce786c23a9c3"
       define_method(:install) do
         bin.install "stav-tunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.2.3/stav-tunnel_0.2.3_linux_arm64.tar.gz"
-      sha256 "d1d7166102941e78e1f8133cdc984f040f7b94e4a5d86e1568a93dcc8a261c98"
+      url "https://github.com/stavhq/stav-tunnel/releases/download/v0.3.0/stav-tunnel_0.3.0_linux_arm64.tar.gz"
+      sha256 "3341d03f1c2245bab7bcb4add12c9cbd43d41db1436efba224edc7edc488e615"
       define_method(:install) do
         bin.install "stav-tunnel"
       end
